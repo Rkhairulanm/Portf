@@ -71,14 +71,23 @@ h6 {
 #preloader .line:before {
   content: "";
   position: absolute;
-  background-color: #ffffff;
+  background-color: #149ddd;
   left: 0;
   top: 50%;
   width: 1px;
   height: 0%;
   transform: translateY(-50%);
   animation: lineincrease 1000ms ease-in-out 0s forwards;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* tambahkan bayangan */
 }
+
+@keyframes lineincrease {
+  to {
+    height: 100%;
+  }
+}
+
 
 #preloader .line:after {
   content: "";
@@ -828,6 +837,15 @@ section {
   right: 15px;
 }
 
+/* Tambahkan efek zoom pada gambar saat hover */
+.portfolio .portfolio-wrap img {
+  transition: transform 0.3s ease;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.1);
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -892,6 +910,7 @@ section {
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
